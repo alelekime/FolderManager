@@ -2,16 +2,16 @@ import java.util.List;
 
 public class Folder{
 	String name;
-	private static int index = 0; // variável que altera o índice do vetor de nome
+	private static int index = 0; // variavel que altera o indice do vetor de nome
 	
 	List<Folder> folders;
 	List<File> files;
 	
-	//Vetores com a imformação da pasta
+	//Vetores com a informacao da pasta
 	
-	String names[] = {"FolderTxt", "FolderJpg", "FolderPdf"};
+	String names[] = {"FolderTxt", "FolderImg", "FolderPdf"};
 	
-	public void FillFolder() { // Chama a funcão de setName
+	public void FillFolder() { // Chama a funcao de setName
 		setName(names[index]);
 		index++;
 	}
