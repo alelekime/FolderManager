@@ -4,9 +4,9 @@ public class File{
 	private String ext;
 	private String type;
 	private int size;
-	private static int index = 0;// variável que altera o índice do vetor de extensão 
+	private static int index = 0;// variavel que altera o Ã­ndice do vetor de extensao 
 	
-	//Vetores com as imformações dos arquivos 
+	//Vetores com as imformacoes dos arquivos 
 	
 	String exts[] = {".txt", ".jpg", ".pdf"};
 	
@@ -14,7 +14,7 @@ public class File{
 	
 	String names[][] = { 	{"Frankenstein", "Pride and Prejudice", "Alice's Adventures in Wonderland"}, 
 							{"Eagle Nebula", "Lunch Atop a Skyscraper", "V-J Day in Times Square"},
-							{"CI1062-Paradigmas-de-Programação-Ficha1"}	}; //txt files
+							{"CI1062-Paradigmas-de-ProgramaÃ§Ã£o-Ficha1"}	}; //txt files
 	
 	int sizes[][] = {		{438, 781, 171},
 							{2256, 7212, 13776},
@@ -23,7 +23,7 @@ public class File{
 	
 	
 	
-	public void FileFill (int i, int j) { // Chama os métodos de set(name, type, ext e size)
+	public void FileFill (int i, int j) { // Chama os metodos de set(name, type, ext e size)
 		setExt(exts[index+i]);
 		setName(names[i][j]);
 		setSize(sizes[i][j]);
