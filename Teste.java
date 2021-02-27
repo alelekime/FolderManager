@@ -29,7 +29,7 @@ public class Teste {
 		
 		
 		printAll(folderMain.files, folderMain.folders);// Chama o metodo para imprimir na tela os nomes de todos os arquivos e pastas 
-		printText(folderMain,folderMain.files, folderMain.folders);// Chama o metodo para imprimir na tela os nomes dos arquivos do tipo texto
+		printType(folderMain,folderMain.files, folderMain.folders, "txt");// Chama o metodo para imprimir na tela os nomes dos arquivos do tipo escolhido: txt, pdf ou img 
 	}
 	
 	
@@ -50,13 +50,13 @@ public class Teste {
 		
 	}
 	
-	public static void printText(Folder folderMain,List<File> files,List<Folder> folders) {
+	public static void printType(Folder folderMain,List<File> files,List<Folder> folders, String type) {
 		int index = 0; //indice para percorrer o Array de files 
-		System.out.println("Todos os arquivos de tipo texto: \n");
-		System.out.println("Text Files: " + folderMain.files.get(0).exts[0]);// Imprime o nome da pasta de texto 
+		System.out.println("Todos os arquivos de tipo "+type + ": \n");
+		System.out.println("Text Files: " + "."+ type);// Imprime o nome da pasta de texto 
 		for (int j = 0; j < files.size(); j++) {// Percorre to do Array procurando 
-			if (files.get(index).getExt().equals(folderMain.files.get(0).exts[0])) {// Se o objeto tiver a extensao .txt, imprime na tela 
-				System.out.println("	" + files.get(index).getName());// Imprime nome do file 
+			if (files.get(index).getType().equals(type)) {// Se o objeto tiver a extensao .txt, imprime na tela 
+				System.out.println("	" + files.get(index).getName() + files.get(index).getExt());// Imprime nome do file 
 			}
 			index++;//Altera a posicao do Array de files para adicionar o próximo
 		}
